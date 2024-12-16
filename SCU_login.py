@@ -78,7 +78,6 @@ def get_2FA_result(access_token: str, applicaation_key):
     headers = {
         'Accept': 'application/json, text/plain, */*',
         'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
-        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiZW50ZXJwcmlzZV9tb2JpbGVfcmVzb3VyY2UiLCJiZmZfYXBpX3Jlc291cmNlIl0sImV4cCI6MTczNDMzNTg4NSwidXNlcl9uYW1lIjoiMjAyMzE0MTQ2MDA4MSIsImp0aSI6IjM5YTI5ODNkLTI3MjEtNDNjYy04NmM1LWVkM2E5YjFiNDk4MCIsImNsaWVudF9pZCI6IjEzNzFjYmVkYTU2MzY5NzUzN2YyOGQ5OWI0NzQ0YTk3M3VES3RnWXFMNUIiLCJzY29wZSI6WyJyZWFkIl19.kxWiox1elBLLeTL8HPL-lvz-tu938xROZz2-wVRj_38',
         'Cache-Control': 'no-cache',
         'Connection': 'keep-alive',
         'Pragma': 'no-cache',
