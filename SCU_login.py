@@ -66,7 +66,7 @@ def get_access_token(client_id: str, username: str, password: str):
                                 data=payload)
     result = json.loads(response.text)
     if not result['success']:
-        return None
+        return None,None
     access_token = result['data']['access_token']
     refresh_token = result['data']['refresh_token']
     return access_token,refresh_token
