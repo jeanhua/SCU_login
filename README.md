@@ -5,7 +5,7 @@
 ```
  1.调用 get_access_token(client_id: str, username: str, password: str) 方法获取 access_token
     参数有:
-        client_id 客户端id，用于区分不同的网站，比如大川学堂是 1371cbeda563697537f28d99b4744a973uDKtgYqL5B 		，具体的可以F12抓包登陆查看
+        client_id 客户端id，用于区分不同的网站，比如大川学堂是1371cbeda563697537f28d99b4744a973uDKtgYqL5B，具体的可以F12抓包登陆查看
         username 学号
         password 密码
 2.(可选)获取到access_token后，调用 get_2FA_result(access_token: str, applicaation_key)
