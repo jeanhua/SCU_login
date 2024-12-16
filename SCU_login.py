@@ -1,7 +1,7 @@
 """
 四川大学教务系统统一登陆认证脚本
 使用方法：
-    1.调用 get_access_token(client_id: str, username: str, password: str) 方法获取 access_token
+    1.调用 get_access_token(client_id: str, username: str, password: str) 方法获取 access_token 和 refresh_token
     参数有:
         client_id 客户端id，用于区分不同的网站，比如大川学堂是 1371cbeda563697537f28d99b4744a973uDKtgYqL5B ，具体的可以F12抓包登陆查看
         username 学号
@@ -68,7 +68,8 @@ def get_access_token(client_id: str, username: str, password: str):
     if not result['success']:
         return None
     access_token = result['data']['access_token']
-    return access_token
+    refresh_token = result['data']['refresh_token']
+    return access_token,refresh_token
 
 
 def get_2FA_result(access_token: str, applicaation_key):
