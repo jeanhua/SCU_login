@@ -42,7 +42,6 @@ def get_access_token(client_id: str, username: str, password: str):
     sm2_pubkey = result['data']['publicKey']
     code_sm2 = result['data']['code']
     password_encrypt = sm2_encrypt_base64(password, sm2_pubkey)
-    print(password_encrypt)
     payload = "{\"client_id\":\"{client_id}\",\"grant_type\":\"password\",\"scope\":\"read\",\"username\":\"{username}\",\"password\":\"{password_encrypt}\",\"_enterprise_id\":\"scdx\",\"sm2_code\":\"{sm2_code}\",\"cap_code\":\"{cap_code}\",\"cap_text\":\"{cap_text}\"}".replace(
         "{username}", username).replace("{password_encrypt}", password_encrypt).replace("{sm2_code}", code_sm2).replace(
         "{cap_code}", code_captcha).replace("{cap_text}", cap_text).replace("{client_id}", client_id)
