@@ -1,6 +1,6 @@
 # 四川大学教务系统统一登陆认证脚本
 
-## 使用方法：
+## 使用方法(python)：
 
 ```
  1.调用 get_access_token(client_id: str, username: str, password: str) 方法获取 access_token
@@ -13,3 +13,14 @@
         返回false说明登陆成功，否则则需要二次认证(短信验证码之类的)
 3.使用accesstoken重定向到对应的网站即可登陆成功，获取request的cookie即可进行各种操作
 ```
+
+## 使用方法(dart)：
+
+```
+四川大学统一登录认证脚本——dart
+使用方法：
+  1.创建LoginInstance类
+  2.调用LoginInstance类方法getCapcode，返回Uint8List字节数组，可显示出来读取，或者调用其他接口自动识别
+  3.调用LoginInstance类方法get_access_token获取token和refresh_token
+```
+
